@@ -1,0 +1,144 @@
+* { 
+	box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'allemanda';
+  src: url('../font/Allamanda.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DailySparkSans';
+  src: url('../font/DailySparkSans.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'CloneAge';
+  src: url('../font/CloneAge.ttf') format('truetype');
+}
+
+body {
+	background-color: #1c1c1c;
+	font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    margin: 0;
+	color: white;
+}
+
+.sidebox {
+	display: flex;
+    flex-direction: column;
+}
+
+.sidebox a {
+	text-decoration: none;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	margin: 10px auto;
+	color: white;
+	border-radius: 15px;
+	box-shadow: 0px 0px 5px 1px black;
+}
+
+.sidebox a.active {
+	box-shadow: 0px 0px 5px 1px white;
+}
+
+.sidebox a img {
+	width: 70%;
+	fill: #fff;
+}
+
+.card {
+    width: 1100px;
+	height: 600px;
+	border-radius: 15px;
+	padding: 50px;
+	box-shadow: 0px 0px 5px 1px black;
+	background-image: url('../images/bg.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.row {
+  display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.row:first-child {
+	height: 70%;
+}
+
+.row:last-child {
+	height: 30%;
+}
+
+.left {
+	padding: 10px;
+	width: 40%;
+	text-align: center;
+}
+
+.right {
+	padding: 10px;
+	font-size: 20px;
+	width: 60%;
+}
+
+.right h1 {
+	font-family: allemanda;
+	font-size: 65px;
+	text-transform: uppercase;
+	margin: 0px;
+}
+
+.right h2 {
+	margin: 0px;
+}
+
+.bottom {
+	width: 100%;
+	text-align: center;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.profile {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid black;
+}
+
+.bottom a {
+	width: 250px;
+	padding: 0;
+	margin: 0 25px;
+	border: none;
+	background-color: transparent;
+	font-family: sans-serif;
+	font-size: 20px;
+	color: white;
+}
+
+.bottom a button {
+	width: 100%;
+	height: 100px;
+	background-color: #0bb3b3;
+	color: white;
+	cursor: pointer;
+	font-size: 25px;
+	height: 100px;
+	border: 3px solid black;
+	border-radius: 15px;
+}

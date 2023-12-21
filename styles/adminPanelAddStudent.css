@@ -1,0 +1,157 @@
+* { 
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #1c1c1c;
+	font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    margin: 0;
+}
+
+.sidebox {
+	display: flex;
+    flex-direction: column;
+}
+
+.sidebox a {
+	text-decoration: none;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	margin: 10px auto;
+	color: white;
+	border-radius: 15px;
+	box-shadow: 0px 0px 5px 1px black;
+}
+
+.sidebox a.active {
+	box-shadow: 0px 0px 5px 1px white;
+}
+
+.sidebox a img {
+	width: 70%;
+}
+
+.card {
+	background-image: url('../images/main.png');
+	background-size: cover;
+	background-position: center;
+    display: flex;
+    width: 1100px;
+	height: 600px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 5px 1px black;
+	color: white;
+	padding: 50px;
+}
+
+.column {
+    flex-basis: 75%; /* Adjust the column width as needed */
+    display: flex;
+	width: 100%;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction:column;
+}
+
+.container a {
+	text-align: center;
+	border-radius: 15px;
+	box-shadow: 0px 0px 5px 1px black;
+	background-color: #fff;
+	color: #000;
+	padding: 10px 0;
+	margin: 10px 0;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.container a.active {
+	background-color: gray;
+	color: white;
+}
+
+.container form {
+	margin: 10px 0;
+	text-align: center;
+}
+
+.container form input, select{
+	font-size: 30px;
+	margin: 20px 5px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 5px 1px black;
+	text-align: center;
+}
+
+.column:first-child {
+	border-radius: 15px 0px 0px 15px;
+	flex-basis: 25%;
+}
+	
+.idInput input {
+	width: 80%;
+	margin: 0 0 10px 0;
+	height: 60px;
+	text-align: center;
+	font-size: 30px;
+	border: none;
+	border-radius: 15px;
+	border: 3px solid black;
+}
+
+.idInput input:last-child {
+	background-color: #0bb3b3;
+	color: white;
+	cursor: pointer;
+	width: 160px;
+	height: 60px;
+}
+
+.logo {
+	width: 70%;
+}
+
+.statistics {
+	display: flex;
+	justify-content: center;
+	margin: 50px 0;
+	background-color: white;
+	border-radius: 15px;
+	color: black;
+	border: 3px solid black;
+}
+
+.box {
+	width: 100%;
+}
+
+.historyList {
+	background-color: white;
+	color: black;
+	border: 3px solid white;
+	height: 100%;
+	overflow: auto;
+	margin-left: 30px;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 1px black;
+}
+
+tr:nth-child(odd) {
+	background-color: #f2f2f2; /* Gray */
+}
+ tr:nth-child(even) {
+    background-color: white;
+}
