@@ -39,15 +39,14 @@
 			</div>
 			<div class="column">
 				<div class="container">
-					<form action="" method="post" enctype="multipart/form-data">
-						<label for="image">Choose Image:</label>
-						<input type="file" name="image" id="image">
+				<form action="" method="post" enctype="multipart/form-data">
+						<img src="../images/none.PNG" alt="Image Preview" class="image-preview" id="imagePreview">
 						<br>
-						<label form="studentID">Student ID</label>
-						<input type="text" name="studentID" id="schoolID" required>
+						<input type="file" name="image" id="image" onchange="previewImage()">
 						<br>
-						<label form="studentName">Student Name</label>
-						<input type="text" name="studentName" id="studentName" required>
+						<input type="text" name="studentID" id="schoolID" required placeholder="Student ID">
+						<br>
+						<input type="text" name="studentName" id="studentName" required placeholder="Student Name ">
 						<br>
 						<label form="studentName">Course</label>
 						<select name="studentCourse" id="studentCourse" required>
@@ -56,14 +55,40 @@
 							<option value="Food Technology">Food Technology</option>
 							<option value="Office Administration">Office Administration</option>
 						</select>
-						<br>
-						<input type="submit" name="submit" value="Add Student" required>
+						<input type="submit" name="submit" value="Add Student" required class="submitBtn">
 					</form>
-					<?php
-						echo $notice;
-					?>
 				</div>
 			</div>
 		</div>
+		<?php
+			echo $notice;
+		?>
+		<script>
+			function previewImage() {
+				var fileInput = document.getElementById('image');
+				var imagePreview = document.getElementById('imagePreview');
+
+				var file = fileInput.files[0];
+
+				if (file) {
+					var reader = new FileReader();
+
+					reader.onload = function (e) {
+					imagePreview.src = e.target.result;
+					};
+
+					reader.readAsDataURL(file);
+				} else {
+					imagePreview.src = '#'; // Clear the preview if no file is selected
+				}
+			}
+
+			function ok() {
+				var ok = document.getElementById('ok');
+				var confirmation = document.getElementById('confirmation');
+
+				confirmation.style.display = 'none';
+			}
+		</script>
 	</body>
 </html>

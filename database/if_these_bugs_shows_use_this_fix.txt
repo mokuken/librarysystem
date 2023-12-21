@@ -1,0 +1,12 @@
+make the id 1 to up number / reset the number 1 to up
+use this code:
+
+SET @id := 0;
+UPDATE temp_table SET id = @id := @id + 1;
+
+==========================================================================================
+
+if theres a bug on student list where the id is all set to 0 because of importing issue
+use this code:
+
+ALTER TABLE students MODIFY COLUMN id INT AUTO_INCREMENT PRIMARY KEY;

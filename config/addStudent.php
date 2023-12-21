@@ -23,12 +23,12 @@
 		if(mysqli_num_rows($verify_query) != 0 ) {
 			$errorText = "Student ID is already exist, please try different ID number";
 			$errorStyle = "font-weight: bold;color: #ff6a6a;text-align: center;";
-			$error = "<p style='$errorStyle'>$errorText</p>";
+			$error = "<div id='confirmation' style='display: block;'><div class='dimBackground'></div><div class='okConfimation'><h2 style='$errorStyle'>$errorText</h2><button onclick='ok()'>Ok</button></div></div>";
 		} else {
 			mysqli_query($database, "INSERT INTO students(studentID, studentProfile, studentName, studentCourse) VALUES('$studentID', '$image_data', '$studentName', '$studentCourse')");
 			$errorText = "Student Added Succesfully";
-			$errorStyle = "font-weight: bold;text-align: center;";
-			$error = "<p style='$errorStyle'>$errorText</p>";
+			$errorStyle = "display: block;";
+			$error = "<div id='confirmation' style='$errorStyle'><div class='dimBackground'></div><div class='okConfimation'><h2>$errorText</h2><button onclick='ok()'>Ok</button></div></div>";
 		}
 		
 	}
